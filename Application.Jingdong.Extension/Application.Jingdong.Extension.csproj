@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Joseph-Yue</Authors>
+    <Company>stay-at-home</Company>
+    <Product>good-product</Product>
+    <Description>
+      京东接口拓展。
+
+      注：代码基于京东联盟和京东开普勒接口编写。
+
+
+      京东联盟API（官网地址：https://union.jd.com/openplatform/api）
+
+      开普勒API（官网地址：https://open.jd.com/home/home#/doc/apiapiCateId=572&amp;apiId=3855&amp;apiName=jd.kepler.xuanpin.getpkglist）
+
+      版本更新：
+      京东开普勒：
+      修复接口参数拼接问题
+      京东联盟：
+      修复接口参数拼接问题
+    </Description>
+    <PackageIcon>application.png</PackageIcon>
+    <Version>1.1.6</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Application.Jingdong.Extension.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.14" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Icon\application.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

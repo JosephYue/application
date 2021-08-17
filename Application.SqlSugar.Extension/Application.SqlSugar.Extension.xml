@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application.SqlSugar.Extension</name>
+    </assembly>
+    <members>
+        <member name="T:Application.SqlSugar.Extension.Config.Auth.SqlSugarTransactionAttribute">
+            <summary>
+            SqlSugar事务
+            </summary>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.Config.Auth.SqlSugarTransactionAttribute.IsReusable">
+            <summary>
+            获取一个值，该值指示是否 CreateInstance(IServiceProvider) 可以在请求之间重复使用结果。
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Config.Auth.SqlSugarTransactionAttribute.CreateInstance(System.IServiceProvider)">
+            <summary>
+            创建实例
+            </summary>
+            <param name="serviceProvider">服务提供者</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.SqlSugar.Extension.Config.Auth.TransactionFilter">
+            <summary>
+            事务过滤器
+            </summary>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.Config.Options.SqlSugarOption.ConnectionConfig">
+            <summary>
+            数据库配置
+            </summary>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.Config.SqlSugarConfiguration.ConnectionConfig">
+            <summary>
+            获取链接信息
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Config.SqlSugarConfiguration.InitializeTables">
+            <summary>
+            初始化表结构
+            </summary>
+        </member>
+        <member name="T:Application.SqlSugar.Extension.Entity`1">
+            <summary>
+            实体实现
+            </summary>
+            <typeparam name="T">主键类型</typeparam>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.Entity`1.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.Interface.IEntity`1.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IQuery`2.GetQueryable">
+            <summary>
+            获取IQueryable的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.Remove(`0)">
+            <summary>
+            根据实体移除
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.RemoveAsync(`0)">
+            <summary>
+            根据实体移除
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式移除
+            </summary>
+            <param name="whereExpression">表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.RemoveAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式移除
+            </summary>
+            <param name="whereExpression">表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.RemoveById(`1)">
+            <summary>
+            根据主键id删除
+            </summary>
+            <param name="id">主键id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.RemoveByIdAsync(`1)">
+            <summary>
+            根据主键id删除
+            </summary>
+            <param name="id">主键id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.Add(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.AddAsync(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.AddRange(System.Collections.Generic.List{`0})">
+            <summary>
+            批量添加
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns>是否添加成功</returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.AddRangeAsunc(System.Collections.Generic.List{`0})">
+            <summary>
+            批量添加
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns>是否添加成功</returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.Update(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.UpdateAsync(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.UpdateRange(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IRepository`2.UpdateRangeAsync(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IUnitOfWork.BeginTran">
+            <summary>
+            开始事务
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IUnitOfWork.CommitTran">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Interface.IUnitOfWork.RollbackTran">
+            <summary>
+            回滚
+            </summary>
+        </member>
+        <member name="T:Application.SqlSugar.Extension.PageData`1">
+            <summary>
+            分页数据集合
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.PageData`1.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.PageData`1.#ctor(System.Int32,System.Collections.Generic.List{`0},System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="rowCount">总条数</param>
+             <param name="data">数据集合</param>
+             <param name="extendedData">扩展信息</param>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.PageData`1.RowCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Application.SqlSugar.Extension.PageData`1.Data">
+            <summary>
+            当前页数据集合
+            </summary>
+        </member>
+        <member name="F:Application.SqlSugar.Extension.QueryBase`2.Dbcontext">
+             <summary>
+            数据库上下文
+             </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.QueryBase`2.#ctor(Application.SqlSugar.Extension.Interface.IUnitOfWork)">
+             <summary>
+            构造函数
+             </summary>
+             <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.QueryBase`2.GetQueryable">
+            <summary>
+            获取IQueryable 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.QueryExtension.ListPager``1(SqlSugar.ISugarQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            获取分页信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryable">查询实体</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.QueryExtension.ListPagerAsync``1(SqlSugar.ISugarQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            获取分页信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryable">查询实体</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.DbSet">
+            <summary>
+            设置当前DbContext
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.Remove(`0)">
+            <summary>
+            根据实体移除
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.RemoveAsync(`0)">
+            <summary>
+            根据实体移除
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式移除
+            </summary>
+            <param name="whereExpression">表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.RemoveAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式移除
+            </summary>
+            <param name="whereExpression">表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.RemoveById(`1)">
+            <summary>
+            根据主键id删除
+            </summary>
+            <param name="id">主键id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.RemoveByIdAsync(`1)">
+            <summary>
+            根据主键id删除
+            </summary>
+            <param name="id">主键id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.Add(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.AddAsync(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.AddRange(System.Collections.Generic.List{`0})">
+            <summary>
+            批量添加
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns>是否添加成功</returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.AddRangeAsunc(System.Collections.Generic.List{`0})">
+            <summary>
+            批量添加
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns>是否添加成功</returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.Update(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.UpdateAsync(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.UpdateRange(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.RepositoryBase`2.UpdateRangeAsync(System.Collections.Generic.List{`0})">
+            <summary>
+            批量修改
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.SqlSugar.Extension.Startup">
+            <summary>
+            配置信息
+            </summary>
+        </member>
+        <member name="M:Application.SqlSugar.Extension.Startup.AddSqlSugar(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.SqlSugar.Extension.Config.Options.SqlSugarOption})">
+            <summary>
+            添加SqlSugar服务
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+    </members>
+</doc>

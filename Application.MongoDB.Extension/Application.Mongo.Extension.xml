@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application.Mongo.Extension</name>
+    </assembly>
+    <members>
+        <member name="T:Application.Mongo.Extension.Config.Attributes.CollectionNameAttribute">
+            <summary>
+            MongoCollection的Attribute
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.Config.Attributes.CollectionNameAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">MongoCollection的name</param>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Attributes.CollectionNameAttribute.Name">
+            <summary>
+            MongoCollection的name
+            </summary>
+        </member>
+        <member name="T:Application.Mongo.Extension.Config.MongoContainer">
+            <summary>
+            mongodb配置信息
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.MongoContainer.MongoConnectionOption">
+            <summary>
+            基础配置
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.MongoContainer.MongoClientSettingsOption">
+            <summary>
+            MongoClientSettings配置
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.MongoContainer.MongoUrlOption">
+            <summary>
+            MongoUrl配置
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.MongoContainer.CollectionNames">
+            <summary>
+            MongoCollection的名称集合 元组 第一个  CollectionNameAttribute 的name 第二个 当前类型的 Name 
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.Config.MongoContainer.SetCollectionNames">
+            <summary>
+            设置MongoCollection的名称集合
+            </summary>
+        </member>
+        <member name="T:Application.Mongo.Extension.Config.Options.MongoConnectionOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Options.MongoConnectionOption.ConnectionString">
+            <summary>
+            链接数据库的字符串
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Options.MongoConnectionOption.Database">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="T:Application.Mongo.Extension.Config.Options.MongoClientSettingsOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Options.MongoClientSettingsOption.MongoClientSettings">
+            <summary>
+            MongoDb的配置
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Options.MongoClientSettingsOption.Database">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="T:Application.Mongo.Extension.Config.Options.MongoUrlOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Options.MongoUrlOption.MongoUrl">
+            <summary>
+            包含设置的URL
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.Config.Options.MongoUrlOption.Database">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="T:Application.Mongo.Extension.Interface.IMongo">
+            <summary>
+            MongoDb接口
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.Interface.IMongo.GetCollection``1">
+            <summary>
+            得到一组MongoDb的数据链接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.Interface.IMongo.GetCollection``1(MongoDB.Driver.MongoCollectionSettings)">
+            <summary>
+            得到一组MongoDb的数据链接
+            </summary>
+            <param name="settings">当前链接的配置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.Interface.IMongo.GetCollection``1(System.String)">
+            <summary>
+            得到一组MongoDb的数据链接
+            </summary>
+            <param name="name">指定的实体链接名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.Interface.IMongo.GetCollection``1(System.String,MongoDB.Driver.MongoCollectionSettings)">
+            <summary>
+            得到一组MongoDb的数据链接
+            </summary>
+            <param name="name">指定的实体链接名称</param>
+            <param name="settings">当前链接的配置</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Mongo.Extension.MongoDbContext">
+            <summary>
+            mongodb的dbcontext
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.MongoDbContext.GetCollection``1">
+            <summary>
+            获取MongoDB的Collection
+            </summary>
+            <typeparam name="TDocument">Collection的泛型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.MongoDbContext.GetCollection``1(MongoDB.Driver.MongoCollectionSettings)">
+            <summary>
+            获取MongoDB的Collection
+            </summary>
+            <typeparam name="TDocument">Collection的泛型</typeparam>
+            <param name="settings">配置信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.MongoDbContext.GetCollection``1(System.String)">
+            <summary>
+            获取MongoDB的Collection
+            </summary>
+            <typeparam name="TDocument">Collection的泛型</typeparam>
+            <param name="name">Collection的name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.MongoDbContext.GetCollection``1(System.String,MongoDB.Driver.MongoCollectionSettings)">
+            <summary>
+            获取MongoDB的Collection
+            </summary>
+            <typeparam name="TDocument">Collection的泛型</typeparam>
+            <param name="name">Collection的name</param>
+            <param name="settings">配置信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Mongo.Extension.DbContextConfig">
+            <summary>
+            数据库配置信息
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.DbContextConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.DbContextConfig.Client">
+            <summary>
+            请求
+            </summary>
+        </member>
+        <member name="P:Application.Mongo.Extension.DbContextConfig.DataBase">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.DbContextConfig.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.DbContextConfig.GetDatabase">
+            <summary>
+            获取数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Mongo.Extension.DbContextConfig.GetDatabase(System.String)">
+            <summary>
+            获取数据库
+            </summary>
+            <param name="database">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Mongo.Extension.Startup">
+            <summary>
+            MongoDB配置类
+            </summary>
+        </member>
+        <member name="M:Application.Mongo.Extension.Startup.AddMongoServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Mongo.Extension.Config.Options.MongoConnectionOption})">
+            <summary>
+            注册MogoDb服务
+            </summary>
+            <param name="service">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+        <member name="M:Application.Mongo.Extension.Startup.AddMongoServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Mongo.Extension.Config.Options.MongoClientSettingsOption})">
+            <summary>
+            注册MogoDb服务
+            </summary>
+            <param name="service">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+        <member name="M:Application.Mongo.Extension.Startup.AddMongoServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Mongo.Extension.Config.Options.MongoUrlOption})">
+            <summary>
+            注册MogoDb服务
+            </summary>
+            <param name="service">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+    </members>
+</doc>

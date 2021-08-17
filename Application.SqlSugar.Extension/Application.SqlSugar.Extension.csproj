@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Joseph-Yue</Authors>
+    <Company>stay-at-home</Company>
+    <Product>good-product</Product>
+    <Description>
+      基础类库——SqlSugar拓展
+
+      版本更新：
+      1、SqlSugar拓展，查询及添加编辑
+    </Description>
+    <PackageIcon>application.png</PackageIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Application.SqlSugar.Extension.xml</DocumentationFile>
+    <WarningLevel>3</WarningLevel>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.14" />
+    <PackageReference Include="SqlSugarCore" Version="5.0.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Icon\application.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

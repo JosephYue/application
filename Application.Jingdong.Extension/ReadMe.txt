@@ -1,0 +1,1 @@
+﻿注：代码基于京东联盟和京东开普勒接口编写。京东联盟API（官网地址：https://union.jd.com/openplatform/api）开普勒API（官网地址：https://open.jd.com/home/home#/doc/api?apiCateId=572&apiId=3855&apiName=jd.kepler.xuanpin.getpkglist）

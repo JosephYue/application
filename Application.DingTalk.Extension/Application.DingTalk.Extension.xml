@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application.DingTalk.Extension</name>
+    </assembly>
+    <members>
+        <member name="T:Application.DingTalk.Extension.Config.Options.CustomRobotOptions">
+            <summary>
+            自定义机器人配置
+            </summary>
+        </member>
+        <member name="P:Application.DingTalk.Extension.Config.Options.CustomRobotOptions.Webhook">
+            <summary>
+            自定义钉钉机器人的Webhook地址
+            </summary>
+        </member>
+        <member name="P:Application.DingTalk.Extension.Config.Options.CustomRobotOptions.Signature">
+            <summary>
+            签名（机器人加签时，此字段必填）
+            </summary>
+        </member>
+        <member name="T:Application.DingTalk.Extension.DingTalkContainer">
+            <summary>
+            钉钉拓展容器
+            </summary>
+        </member>
+        <member name="P:Application.DingTalk.Extension.DingTalkContainer.CustomRobotOptions">
+            <summary>
+            自定义机器人配置
+            </summary>
+        </member>
+        <member name="T:Application.DingTalk.Extension.DingTalkLogLoggerExtension">
+            <summary>
+            钉钉日志拓展
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogInformationForDingTalk(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="message">消息信息</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组。</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogInformationForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="message">消息内容</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogInformationForDingTalk(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogInformationForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogErrorForDingTalk(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="message">消息信息</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组。</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogErrorForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="message">消息内容</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogErrorForDingTalk(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogErrorForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogDebugForDingTalk(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="message">消息信息</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组。</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogDebugForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="message">消息内容</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogDebugForDingTalk(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogDebugForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogCriticalForDingTalk(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="message">消息信息</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组。</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogCriticalForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="message">消息内容</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogCriticalForDingTalk(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogCriticalForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogTraceForDingTalk(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="message">消息信息</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组。</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogTraceForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="message">消息内容</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogTraceForDingTalk(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogTraceForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogWarningForDingTalk(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="message">消息信息</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组。</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogWarningForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="message">消息内容</param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogWarningForDingTalk(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.LogWarningForDingTalk(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])">
+            <summary>
+            向钉钉机器人发送消息并记录日志
+            </summary>
+            <param name="logger">日志接口</param>
+            <param name="eventId">标识id</param>
+            <param name="exception">错误信息</param>
+            <param name="message">消息内容</param>
+            <param name="args">包含要格式化的零个或多个对象的对象数组</param>
+        </member>
+        <member name="P:Application.DingTalk.Extension.DingTalkLogLoggerExtension.DingTalkClient">
+            <summary>
+            钉钉Client
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.DingTalkLogLoggerExtension.SendText(System.String)">
+            <summary>
+            向钉钉机器人发送文本内容
+            </summary>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="T:Application.DingTalk.Extension.Model.TextContent">
+            <summary>
+            文本内容
+            </summary>
+        </member>
+        <member name="P:Application.DingTalk.Extension.Model.TextContent.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="T:Application.DingTalk.Extension.Services.CustomRobotServices">
+            <summary>
+            自定义机器人服务实现
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Services.CustomRobotServices.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Services.CustomRobotServices.SendText(System.String,System.String)">
+            <summary>
+            发送文本消息
+            </summary>
+            <param name="message">文本消息内容</param>
+            <param name="at">需要@的人 json 类型  参考文档</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Services.CustomRobotServices.SendText(System.String,DingTalk.Api.Request.OapiRobotSendRequest.AtDomain)">
+            <summary>
+            发送文本消息
+            </summary>
+            <param name="message">文本消息内容</param>
+            <param name="at">需要@的人</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.DingTalk.Extension.Services.Interface.ICustomRobotServices">
+            <summary>
+            自定义机器人服务
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Services.Interface.ICustomRobotServices.SendText(System.String,System.String)">
+            <summary>
+            发送文本消息
+            </summary>
+            <param name="message">文本消息内容</param>
+            <param name="at">需要@的人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Services.Interface.ICustomRobotServices.SendText(System.String,DingTalk.Api.Request.OapiRobotSendRequest.AtDomain)">
+            <summary>
+            发送文本消息
+            </summary>
+            <param name="message">文本消息内容</param>
+            <param name="at">需要@的人</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.DingTalk.Extension.Startup">
+            <summary>
+            钉钉拓展接口
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Startup.AddCustomRobotServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.DingTalk.Extension.Config.Options.CustomRobotOptions})">
+            <summary>
+            添加自定义机器人服务
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+        <member name="T:Application.DingTalk.Extension.Utils">
+            <summary>
+            工具类
+            </summary>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Utils.ConvertDateToUnix(System.DateTime,System.Boolean)">
+            <summary>
+            时间转换为时间戳
+            </summary>
+            <param name="time">时间信息</param>
+            <param name="isMillisecond">是否是毫秒级时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Utils.GetHmac(System.String,System.String)">
+            <summary>
+            获取签名
+            </summary>
+            <param name="sign">timestamp+"\n"+密钥</param>
+            <param name="secret">配置的签名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Utils.GetCustomRobotWebhook">
+            <summary>
+            获取自定义机器人请求完整地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Utils.JsonDeserialize``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Utils.JsonDeserialize(System.String,System.Type)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="o"></param>
+            <param name="type">参数类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.DingTalk.Extension.Utils.JsonSerializer(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

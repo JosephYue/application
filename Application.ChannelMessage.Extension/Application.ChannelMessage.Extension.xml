@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application.ChannelMessage.Extension</name>
+    </assembly>
+    <members>
+        <member name="T:Application.ChannelMessage.Extension.ChannelMessage.Attributes.ChannelSubscriberAttribute">
+            <summary>
+            订阅Attribute 只有带了此标识才会被订阅方法
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Attributes.ChannelSubscriberAttribute.SubscriberName">
+            <summary>
+            订阅者名称
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Attributes.ChannelSubscriberAttribute.GroupName">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.ChannelPublisher.Write``1(System.String,``0)">
+            <summary>
+            写入队列（同步）
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="subscriberName">订阅者名称</param>
+            <param name="contentObj">参数内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.ChannelPublisher.Write(System.String)">
+            <summary>
+            写入队列（同步）
+            </summary>
+            <param name="subscriberName">订阅者名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.ChannelPublisher.WriteAsync``1(System.String,``0)">
+            <summary>
+            写入队列（异步）
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="subscriberName">订阅者名称</param>
+            <param name="contentObj">参数内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.ChannelPublisher.WriteAsync(System.String)">
+            <summary>
+            写入队列（异步）
+            </summary>
+            <param name="subscriberName">订阅者名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.ChannelPublisher.CheckChannel(System.String)">
+            <summary>
+            检查是否允许写入消息
+            </summary>
+            <param name="subscriberName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ChannelPublisher.DataStorage">
+            <summary>
+            数据库查询
+            </summary>
+        </member>
+        <member name="F:Application.ChannelMessage.Extension.ChannelMessage.Config.ChannelMessageConfig.Actions">
+            <summary>
+            控制器方法信息集合
+            </summary>
+        </member>
+        <member name="F:Application.ChannelMessage.Extension.ChannelMessage.Config.ChannelMessageConfig.MessageChannel">
+            <summary>
+            Channel队列信息
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Config.ChannelMessageConfig.ChannelMessageOption">
+            <summary>
+            ChannelMessage配置信息
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Config.ChannelMessageConfig.OptionsBuilder">
+            <summary>
+            ChannelMessage配置信息委托
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Config.MySqlConnectionConfig.Execute(System.String)">
+            <summary>
+            添加/编辑
+            </summary>
+            <param name="sql">sql语句</param>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Config.MySqlConnectionConfig.Execute(System.String,System.Object[])">
+            <summary>
+            添加/编辑
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql语句拼接的参数</param>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Config.MySqlConnectionConfig.Query``1(System.String,System.Func{System.Data.IDataReader,``0})">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">返回值类型</typeparam>
+            <param name="sql">sql语句</param>
+            <param name="func">委托（用来修改返回参数）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.ChangePublishState(System.String,Application.ChannelMessage.Extension.ChannelMessage.Enum.Status.MessageStatusEnum,System.String)">
+            <summary>
+            修改发布信息状态
+            </summary>
+            <param name="id">消息di</param>
+            <param name="state">消息状态</param>
+            <param name="msg">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.ChangeReceiveState(System.String,Application.ChannelMessage.Extension.ChannelMessage.Enum.Status.MessageStatusEnum,System.Int32,System.String)">
+            <summary>
+            修改接收信息状态
+            </summary>
+            <param name="id">消息id</param>
+            <param name="state">消息状态</param>
+            <param name="retries"></param>
+            <param name="msg">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.DelPublishExpireMessage">
+            <summary>
+            删除发布信息状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.DelReceiveExpireMessage">
+            <summary>
+            删除过期的接收消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.InsertPublishMessage(Application.ChannelMessage.Extension.ChannelMessage.ValueModel.PublishMessageValueModel)">
+            <summary>
+            添加发布信息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.InsertReceiveMessage(Application.ChannelMessage.Extension.ChannelMessage.ValueModel.ReceiveMessageValueModel)">
+            <summary>
+            添加接收信息
+            </summary>
+            <param name="message">消息状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.GetReceiveRetryMessages">
+            <summary>
+            获取需要重试的接收消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.GetPublishRetryMessages">
+            <summary>
+            获取需要重试的发送消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.InitializationTable">
+            <summary>
+            初始化数据库
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.PublishTableName">
+            <summary>
+            发送表 表名
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.DataStorage.ReceiveTableName">
+            <summary>
+            接收表 表名
+            </summary>
+        </member>
+        <member name="F:Application.ChannelMessage.Extension.ChannelMessage.Enum.Status.MessageStatusEnum.Failed">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:Application.ChannelMessage.Extension.ChannelMessage.Enum.Status.MessageStatusEnum.Scheduled">
+            <summary>
+            预定的
+            </summary>
+        </member>
+        <member name="F:Application.ChannelMessage.Extension.ChannelMessage.Enum.Status.MessageStatusEnum.Succeeded">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Interface.IChannelPublisher.WriteAsync``1(System.String,``0)">
+            <summary>
+            写入队列（异步）
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="subscriberName">订阅者名称</param>
+            <param name="contentObj">参数内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Interface.IChannelPublisher.WriteAsync(System.String)">
+            <summary>
+            写入队列（异步）
+            </summary>
+            <param name="subscriberName">订阅者名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Interface.IChannelPublisher.Write``1(System.String,``0)">
+            <summary>
+            写入队列（同步）
+            </summary>
+            <typeparam name="T">参数类型</typeparam>
+            <param name="subscriberName">订阅者名称</param>
+            <param name="contentObj">参数内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Interface.IChannelPublisher.Write(System.String)">
+            <summary>
+            写入队列（同步）
+            </summary>
+            <param name="subscriberName">订阅者名称</param>
+            <returns></returns>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Options.ChannelMessageOptions.ConnectionString">
+            <summary>
+            Gets or sets the database's connection string that will be used to store database entities.
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Options.ChannelMessageOptions.TableNamePrefix">
+            <summary>
+            表名前缀
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Options.ChannelMessageOptions.FailedRetryCount">
+            <summary>
+            失败重试次数
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Options.ChannelMessageOptions.FailedRetryInterval">
+            <summary>
+            Failed messages polling delay time.
+            Default is 60 seconds.
+            Unit:Seconds
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Options.ChannelMessageOptions.SucceedMessageExpiredAfter">
+            <summary>
+            Sent or received succeed message after time span of due, then the message will be deleted at due time.
+            Default is 24 * 3600 seconds.
+            Unit:Seconds
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            执行方法
+            </summary>
+            <param name="stoppingToken">取消token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.RegisterSubscriber">
+            <summary>
+            注册订阅者信息
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.Processing(System.ValueTuple{System.String,System.String,System.Type,System.Reflection.MethodInfo,System.Collections.Generic.List{System.Type}},System.String,System.String)">
+            <summary>
+            执行方法
+            </summary>
+            <param name="param"></param>
+            <param name="content"></param>
+            <param name="publishMessageId"></param>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.Receive(System.Threading.CancellationToken)">
+            <summary>
+            接收消息
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.RetryReceiveMessageProcessing">
+            <summary>
+            重试失败的接收消息
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.RetryPublishMessageProcessing">
+            <summary>
+            重试失败的发布消息
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.DelExpiresMessage">
+            <summary>
+            删除过期消息
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.InvokeAction(System.String,System.Type,System.Reflection.MethodInfo,System.Collections.Generic.List{System.Type},System.Action,System.Action{System.String})">
+            <summary>
+            执行方法
+            </summary>
+            <param name="content"></param>
+            <param name="type"></param>
+            <param name="method"></param>
+            <param name="serviceTypes"></param>
+            <param name="successAction"></param>
+            <param name="errorAction"></param>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.Services.ChannelBackgroundService.DataStorage">
+            <summary>
+            数据库查询
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.PublishMessageValueModel.Id">
+            <summary>
+            消息id
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.PublishMessageValueModel.SubscriberName">
+            <summary>
+            订阅名称
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.PublishMessageValueModel.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.PublishMessageValueModel.ExecuteMessage">
+            <summary>
+            执行原因
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.PublishMessageValueModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.ReceiveMessageValueModel.Group">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.ReceiveMessageValueModel.PublishMessageId">
+            <summary>
+            发送者消息id
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.ReceiveContentValueModel.PublishMsgId">
+            <summary>
+            发送者消息id
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.ReceiveContentValueModel.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.RetryMessageValueModel.Id">
+            <summary>
+            消息id
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.RetryMessageValueModel.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.RetryMessageValueModel.Retries">
+            <summary>
+            重试次数
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.RetryMessageValueModel.SubscriberName">
+            <summary>
+            订阅队列名
+            </summary>
+        </member>
+        <member name="P:Application.ChannelMessage.Extension.ChannelMessage.ValueModel.RetryMessageValueModel.Group">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.Config.Utils.GetDateTime">
+            <summary>
+            获取当前服务器标准时间（假设服务器是utc时间，此方法用来获取标准时间）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.Config.Utils.ConvertIntDatetime(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="utc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.Config.Utils.JsonDeserialize``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.Config.Utils.JsonDeserialize(System.String,System.Type)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="o"></param>
+            <param name="type">参数类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.Config.Utils.JsonSerializer(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.ChannelMessage.Extension.Startup.AddChannelMessage(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.ChannelMessage.Extension.ChannelMessage.Options.ChannelMessageOptions})">
+            <summary>
+            添加ChannelMessage插件
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+    </members>
+</doc>

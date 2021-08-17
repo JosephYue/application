@@ -1,0 +1,2924 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application.Extension.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:Application.Extension.Infrastructure.Common.CustomAttributeCommon`1">
+            <summary>
+            自定义属性帮助类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.CustomAttributeCommon`1.GetCustomAttribute(System.Type,System.String)">
+            <summary>
+            得到自定义描述
+            </summary>
+            <param name="sourceType">类类型</param>
+            <param name="name">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.DataTableCommon.ToDataTable(System.Collections.IList,System.Boolean)">
+            <summary>
+            将指定的集合转换成DataTable
+            </summary>
+            <param name="list">将指定的集合</param>
+            <param name="hasColumns">是否包含TableColumns</param>
+            <returns>返回转换后的DataTable</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.DataTableCommon.ToDataTable``1(System.Collections.Generic.List{``0},System.Boolean)">
+            <summary>
+            将指定的集合转换成DataTable
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="list">集合信息</param>
+            <param name="hasColumns">是否包含TableColumns</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.DataTableCommon.ToDataTable(System.Collections.IList,System.Data.DataTable,System.Boolean)">
+            <summary>
+            将指定的集合转换成DataTable
+            </summary>
+            <param name="list">将指定的集合</param>
+            <param name="table">DataTable信息</param>
+            <param name="hasColumns">是否包含TableColumns</param>
+            <returns>返回转换后的DataTable</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.DataTableCommon.ToDataTable``1(System.Collections.Generic.List{``0},System.Data.DataTable,System.Boolean)">
+            <summary>
+            将指定的集合转换成DataTable
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="list">集合信息</param>
+            <param name="table">DataTable信息</param>
+            <param name="hasColumns">是否包含TableColumns</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.DataTableCommon.ToEntity``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换为实体
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="table">DataTable信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.DataTableCommon.ToEntities``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换为实体集合
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="table">DataTable信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.EnumCommon">
+            <summary>
+            枚举帮助类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.ToDescriptionDictionary``1">
+            <summary>
+            得到枚举字典（key对应枚举的值，value对应枚举的注释）
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.ToEnumAndAttributes``1(System.Type)">
+            <summary>
+            得到枚举与对应的自定义属性信息
+            </summary>
+            <typeparam name="T">自定义属性</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetKeys``1">
+            <summary>
+            得到枚举字典key的集合（例如：enum Gender{
+               Boy=0,
+               Girl=1
+            }）//其中Girl与Boy为Key
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetValues``1">
+            <summary>
+            得到枚举字典value的集合
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetCustomerObjects``1(System.Type)">
+            <summary>
+            得到枚举字典自定义属性的集合
+            </summary>
+            <param name="type">type必须是枚举</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetDescription(System.Type,System.Object)">
+            <summary>
+            返回枚举项的描述信息。
+            </summary>
+            <param name="type">类型</param>
+            <param name="member">成员名、值、实例均可</param>
+            <returns>枚举想的描述信息。</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetDescription``1(System.Object)">
+            <summary>
+            返回枚举项的描述信息。
+            </summary>
+            <param name="member">成员名、值、实例均可</param>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns>枚举想的描述信息。</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetDescription(System.Enum)">
+            <summary>
+            返回枚举项的描述信息。
+            </summary>
+            <param name="value">要获取描述信息的枚举项。</param>
+            <returns>枚举想的描述信息。</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetCustomerObj``2(System.Object)">
+            <summary>
+            得到自定义描述
+            </summary>
+            <param name="member">成员名、值、实例均可</param>
+            <typeparam name="T">得到自定义描述</typeparam>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetCustomerObj``1(System.Type,System.Object)">
+            <summary>
+            得到自定义描述
+            </summary>
+            <param name="type">类型</param>
+            <param name="member">成员名、值、实例均可</param>
+            <typeparam name="T">得到自定义描述</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetCustomerObj``1(System.Enum)">
+            <summary>
+            得到自定义描述
+            </summary>
+            <param name="value"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.IsExist(System.Object,System.Type)">
+            <summary>
+            判断值是否在枚举中存在
+            </summary>
+            <param name="enumValue">需要判断的参数</param>
+            <param name="enumType">枚举类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetKey``1(System.Object)">
+            <summary>
+            获取枚举实例
+            </summary>
+            <param name="member">枚举类型</param>
+            <typeparam name="TEnum">成员名或者枚举值，例如：Gender中有Boy=1,则传入Boy或者1或者Gender.Boy可获得其key</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.EnumCommon.GetKey(System.Type,System.Object)">
+            <summary>
+            获取成员名
+            </summary>
+            <param name="type">枚举类型</param>
+            <param name="member">成员名或者枚举值，例如：Gender中有Boy=1,则传入Boy或者1或者Gender.Boy可获得其Key</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.DownloadToLocal``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            下载Excel到本地目录
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="excelData">excel信息</param>
+            <param name="headers">excel的头部信息（内容类型默认：string）</param>
+            <param name="localPath">指定的本地路径，没有则默认为程序集的根目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.DownloadToLocal``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.Type},System.String)">
+            <summary>
+            下载Excel到本地目录
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="excelData">excel信息</param>
+            <param name="headers">excel的头部信息，需要指定对应的内容类型。例：typeof(string)</param>
+            <param name="localPath">指定的本地路径，没有则默认为程序集的根目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.DownloadToLocal``1(System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0}}},System.String)">
+            <summary>
+            下载Excel到本地目录
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="sheetDatas">工作表名称（字典key为sheet的名称，字典value为元组，元组的第一个字段为当前sheet内容的表头（内容类型默认：string），第二个为当前sheet展示的内容）</param>
+            <param name="localPath">指定的本地路径，没有则默认为程序集的根目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.DownloadToLocal``1(System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Collections.Generic.Dictionary{System.String,System.Type},System.Collections.Generic.List{``0}}},System.String)">
+            <summary>
+            下载Excel到本地目录
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="sheetDatas">工作表名称（字典key为sheet的名称，字典value为元组，元组的第一个字段为当前sheet内容的表头，需要指定对应的内容类型 例：typeof(string)。第二个为当前sheet展示的内容）</param>
+            <param name="localPath">指定的本地路径，没有则默认为程序集的根目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToStream``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String})">
+            <summary>
+            创建Excel的Stream信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="excelData">excel信息</param>
+            <param name="headers">excel的头部信息（内容类型默认：string）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToStream``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.Type})">
+            <summary>
+            创建Excel的Stream信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="excelData">excel信息</param>
+            <param name="headers">excel的头部信息，需要指定对应的内容类型。例：typeof(string)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToStream``1(System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0}}})">
+            <summary>
+            创建Excel的Stream信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="sheetDatas">工作表名称（字典key为sheet的名称，字典value为元组，元组的第一个字段为当前sheet内容的表头（内容类型默认：string），第二个为当前sheet展示的内容）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToStream``1(System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Collections.Generic.Dictionary{System.String,System.Type},System.Collections.Generic.List{``0}}})">
+            <summary>
+            创建Excel的Stream信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="sheetDatas">工作表名称（字典key为sheet的名称，字典value为元组，元组的第一个字段为当前sheet内容的表头，需要指定对应的内容类型 例：typeof(string)。第二个为当前sheet展示的内容）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToBytes``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String})">
+            <summary>
+            创建Excel的Bytes信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="excelData">excel信息</param>
+            <param name="headers">excel的头部信息（内容类型默认：string）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToBytes``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.Type})">
+            <summary>
+            创建Excel的Bytes信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="excelData">excel信息</param>
+            <param name="headers">excel的头部信息，需要指定对应的内容类型。例：typeof(string)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToBytes``1(System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0}}})">
+            <summary>
+            创建Excel的Bytes信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="sheetDatas">工作表名称（字典key为sheet的名称，字典value为元组，元组的第一个字段为当前sheet内容的表头（内容类型默认：string），第二个为当前sheet展示的内容）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExcelCommon.CreateToBytes``1(System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.Collections.Generic.Dictionary{System.String,System.Type},System.Collections.Generic.List{``0}}})">
+            <summary>
+            创建Excel的Bytes信息
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+            <param name="sheetDatas">工作表名称（字典key为sheet的名称，字典value为元组，元组的第一个字段为当前sheet内容的表头，需要指定对应的内容类型 例：typeof(string)。第二个为当前sheet展示的内容）</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.ExpressionCommon">
+            <summary>
+            表达式树公共类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ExpressionCommon.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            静态拓展 拼接Expression
+            </summary>
+            <typeparam name="T">泛型T</typeparam>
+            <param name="first">参数1</param>
+            <param name="second">参数2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.JsonCommon.IsJsonStart(System.String@)">
+            <summary>
+            是否是json的开头
+            </summary>
+            <param name="json">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.JsonCommon.IsJson(System.String)">
+            <summary>
+            是否是json字符串
+            </summary>
+            <param name="json">json信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.JsonCommon.IsJson(System.String,System.Int32@)">
+            <summary>
+            是否是json字符串（有错误地点索引）
+            </summary>
+            <param name="json">json字符串</param>
+            <param name="errIndex">错误处索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.JsonCommon.GetValueLength(System.String,System.Boolean,System.Int32@)">
+            <summary>
+            获取值的长度（当Json值嵌套以"{"或"["开头时）
+            </summary>
+            <param name="json">json字符串</param>
+            <param name="breakOnErr">发生错误是否直接返回</param>
+            <param name="errIndex">错误处索引</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.JsonCommon.CharState">
+            <summary>
+            字符状态
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.JsonCommon.CharState.arrayStart">
+            <summary>
+            数组开始【仅第一开头才算】，值嵌套的以【childrenStart】来标识。
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.JsonCommon.CharState.state">
+            <summary>
+            【0 初始状态，或 遇到“,”逗号】；【1 遇到“：”冒号】
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.JsonCommon.CharState.keyStart">
+            <summary>
+            【-1 取值结束】【0 未开始】【1 无引号开始】【2 单引号开始】【3 双引号开始】
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.JsonCommon.CharState.valueStart">
+            <summary>
+            【-1 取值结束】【0 未开始】【1 无引号开始】【2 单引号开始】【3 双引号开始】
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.JsonCommon.SetCharState(System.Char,Application.Extension.Infrastructure.Common.JsonCommon.CharState@)">
+            <summary>
+            设置字符状态(返回true则为关键词，返回false则当为普通字符处理）
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.PasswordCommon">
+            <summary>
+            密码公共方法
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.PBKDF2Sum(System.Byte[],System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Get PBKDF2 checksum<br/>
+            获取PBKDF2的校验值<br/>
+            </summary>
+            <param name="data">The data</param>
+            <param name="slat">The slat, length should be 8</param>
+            <param name="iterations">Iteration times</param>
+            <param name="hashLength">Hash length</param>
+            <returns></returns>
+            <example>
+            <code language="cs">
+            var hash = PasswordUtils.PBKDF2Sum(
+            	Encoding.UTF8.GetBytes("123456"),
+            	Encoding.UTF8.GetBytes("12344321"));
+            hash.ToHex() ==
+            	"47e00677444b6d16c36d347a4fea584792fb4a50fe93e762c7e1adf4f73e2475"
+            </code>
+            </example>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.Md5Sum(System.Byte[])">
+            <summary>
+            Get md5 checksum<br/>
+            获取MD5的校验值<br/>
+            </summary>
+            <example>
+            <code language="cs">
+            var hash = PasswordUtils.Md5Sum(Encoding.UTF8.GetBytes("123456"));
+            hash.ToHex() == "e10adc3949ba59abbe56e057f20f883e")
+            </code>
+            </example>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.Sha1Sum(System.Byte[])">
+            <summary>
+            Get sha1 checksum<br/>
+            获取SHA1的校验值<br/>
+            </summary>
+            <example>
+            <code language="cs">
+            var hash = PasswordUtils.Sha1Sum(Encoding.UTF8.GetBytes("123456"));
+            hash.ToHex() == "7c4a8d09ca3762af61e59520943dc26494f8941b"
+            </code>
+            </example>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.Check(System.String,System.String)">
+            <summary>
+            检查加密的值一与值二是否相同
+            </summary>
+            <param name="valueOne">旧值</param>
+            <param name="valueTwo">新值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.FormatPassword(System.String,System.Byte[],Application.Extension.Infrastructure.Common.PasswordCommon.PasswordHashTypeEnum)">
+            <summary>
+            获取加密字符串
+            </summary>
+            <param name="value">需要加密的字符</param>
+            <param name="slat">随机值的byte信息 不传则默认生成随机值</param>
+            <param name="type">密码类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordValueModel">
+            <summary>
+            Password information<br/>
+            密码信息<br/>
+            </summary>
+            <example>
+            <code language="cs">
+            var info = PasswordValueModel.FromPassword("123456");
+            info.Check("12345") == false
+            info.Check("123456") == true
+            </code>
+            </example>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordValueModel.Type">
+            <summary>
+            Password type<br/>
+            密码类型<br/>
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordValueModel.Slat">
+            <summary>
+            Slat in base64<br/>
+            base64格式的盐<br/>
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordValueModel.Hash">
+            <summary>
+            Hash in base64
+            base64格式的校验值</summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordValueModel.Check(System.String)">
+            <summary>
+            Check password, return true for success<br/>
+            检查密码, 成功时返回true<br/>
+            </summary>
+            <param name="password">The password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordValueModel.FormatPassword(System.String,System.Byte[],Application.Extension.Infrastructure.Common.PasswordCommon.PasswordHashTypeEnum)">
+            <summary>
+            Create password information from password<br/>
+            根据密码创建密码信息<br/>
+            </summary>
+            <param name="password">The password</param>
+            <param name="slat">Slat, use a random value if gived null</param>
+            <param name="type">Password type</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordHashTypeEnum">
+            <summary>
+            Password hash type<br/>
+            密码的校验类型<br/>
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordHashTypeEnum.PBKDF2">
+            <summary>
+            PBKDF2<br/>
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordHashTypeEnum.Md5">
+            <summary>
+            Md5<br/>
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.PasswordCommon.PasswordHashTypeEnum.Sha1">
+            <summary>
+            Sha1<br/>
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Common.RandomCommon.Generator">
+            <summary>
+            随机数生成器
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.RandomCommon.SystemRandomBytes(System.Int32)">
+            <summary>
+            获取安全的指定长度的随机内容
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.RandomCommon.SystemRandomInt">
+            <summary>
+            获取安全的随机数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.RandomCommon.RandomInt(System.Int32,System.Int32)">
+            <summary>
+            获取随机数值
+            </summary>
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.RandomCommon.RandomSelection``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            从集合获取随机的元素
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="values">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.RandomCommon.RandomEnum``1">
+            <summary>
+            从枚举获取随机的值
+            如果枚举不包含任何值则返回0
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.RandomCommon.RandomString(System.Int32,System.String)">
+            <summary>
+            生成指定长度的随机字符串
+            </summary>
+            <param name="length">字符串长度</param>
+            <param name="chars">从哪些字符串中取值, 默认字符串 a-zA-Z0-9</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.SecurityCommon">
+            <summary>
+            安全公共基础类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.AesEncrypt(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            AES加密
+            </summary>
+            <param name="toEncrypt"></param>
+            <param name="key"></param>
+            <param name="errCode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Decrypt(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            AES解密
+            </summary>
+            <param name="toDecrypt"></param>
+            <param name="key"></param>
+            <param name="errCode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.GetMd5HashBy16(System.String,System.Text.Encoding,System.Boolean)">
+            <summary>
+            Md5加密，返回16位结果
+            </summary>
+            <param name="input">待加密字符串</param>
+            <param name="encoding">编码方式</param>
+            <param name="isUpper">是否转大写</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.GetMd5Hash(System.String,System.Text.Encoding,System.Boolean)">
+            <summary>
+            MD5加密(32位)
+            </summary>
+            <param name="input">待加密字符串</param>
+            <param name="encoding">编码方式</param>
+            <param name="isUpper">是否转大写</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.GetMd5Hash(System.String,System.Boolean,System.Text.Encoding,System.Boolean)">
+            <summary>
+            得到md5加密结果
+            </summary>
+            <param name="input">待加密字符串</param>
+            <param name="is16">是否16位加密，是否32位加密</param>
+            <param name="encoding">编码方式</param>
+            <param name="isUpper">是否转大写</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.GetSignResult(System.Byte[],System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            MD5加密方法
+            startIndex为空为32位加密
+            </summary>
+            <param name="signed"></param>
+            <param name="startIndex"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Base64Encrypt(System.String)">
+            <summary>
+            BASE64 加密
+            </summary>
+            <param name="value">待加密字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Base64Decrypt(System.String)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="ciphervalue">密文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Sha1(System.String)">
+            <summary>
+            SHA1 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Sha256(System.String)">
+            <summary>
+            SHA256 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Sha512(System.String)">
+            <summary>
+            SHA512 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.HmacSha1(System.String,System.String)">
+            <summary>
+            HmacSha1 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.HmacSha256(System.String,System.String)">
+            <summary>
+            HmacSha256 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.HmacSha384(System.String,System.String)">
+            <summary>
+            HmacSha384 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.HmacSha512(System.String,System.String)">
+            <summary>
+            HmacSha512 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.HmacMd5(System.String,System.String)">
+            <summary>
+            HmacMd5 加密
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.HashAlgorithmBase(System.Security.Cryptography.HashAlgorithm,System.String,System.Text.Encoding)">
+            <summary>
+            HashAlgorithm 加密统一方法
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.SecurityCommon.Bytes2Str(System.Collections.Generic.IEnumerable{System.Byte},System.String)">
+            <summary>
+            转换成字符串
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.StreamCommon">
+            <summary>
+            流信息基础操作
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.GetFileSuffix(System.Byte[])">
+            <summary>
+            根据文件内容得到内容后缀。
+            </summary>
+            <param name="bytes">文件内容。</param>
+            <returns>内容类型（例：.jpg）。</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.GetContentType(System.Byte[])">
+            <summary>
+            根据文件内容得到内容类型。
+            </summary>
+            <param name="bytes">文件内容。</param>
+            <returns>内容类型（例：image/jpeg）。</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.GetRandomFileName(System.Byte[])">
+            <summary>
+            获取一个随机的文件名称。
+            </summary>
+            <param name="data">文件字节组（主要用来得到文件扩展名）。</param>
+            <returns>一个随机的文件名称。</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.BytesToStream(System.Byte[])">
+            将 byte[] 转成 Stream
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.StreamToBytes(System.IO.Stream)">
+            <summary>
+            将Stream转成byte[]
+            </summary>
+            <param name="stream">stream流信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.FileToStream(System.String)">
+            <summary>
+            从文件读取Stream
+            </summary>
+            <param name="fileName">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.FileToByte(System.String)">
+            <summary>
+            从文件读取byte
+            </summary>
+            <param name="fileName">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.StreamToFile(System.IO.Stream,System.String)">
+            <summary>
+            将Stream写入文件
+            </summary>
+            <param name="stream">stream流信息</param>
+            <param name="fileName">写入的路径</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.ByteToFile(System.Byte[],System.String)">
+            <summary>
+            将Stream写入文件
+            </summary>
+            <param name="bytes">byte流信息</param>
+            <param name="fileName">写入的路径</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.UrlToStream(System.String)">
+            <summary>
+            获取Url的Stream信息
+            </summary>
+            <param name="url">网站地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StreamCommon.UrlToBytes(System.String)">
+            <summary>
+            获取Url的Byte信息
+            </summary>
+            <param name="url">网址信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StringCommon.GenerateString">
+            <summary>
+            生成随机字符串
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StringCommon.CreateSmallAbc">
+            <summary>
+            生成单个小写随机字母
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StringCommon.CreateBigAbc">
+            <summary>
+            生成单个大写随机字母
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.StringCommon.CreateNum">
+            <summary>
+            生成单个随机数字
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.TimeCommon">
+            <summary>
+            时间操作类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.UnixTimeNow(System.Boolean)">
+            <summary>
+            获取Unix时间
+            </summary>
+            <param name="isMillisecond">是否是毫秒时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.ConvertToDateTime(System.Int64,System.Boolean)">
+            <summary>
+            时间戳转为DateTime
+            </summary>
+            <param name="timeStamp">时间戳</param>
+            <param name="isMillisecond">是否是毫秒时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.ConvertDateToUnix(System.DateTime,System.Boolean)">
+            <summary>
+            时间转换为时间戳
+            </summary>
+            <param name="time">时间信息</param>
+            <param name="isMillisecond">是否是毫秒级时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetThisMonth">
+            <summary>
+            获取当月时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetNextMonth">
+            <summary>
+            获取下月时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetLastMonth">
+            <summary>
+            获取上月时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetToday">
+            <summary>
+            获取今日时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetYesterday">
+            <summary>
+            获取昨日时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetTomorrow">
+            <summary>
+            获取明日时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetTimeStart(System.String,System.DateTime)">
+            <summary>
+            获取 本周、本月、本季度、本年 的开始时间
+            </summary>
+            <param name="TimeType">Week、Month、Season、Year</param>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TimeCommon.GetTimeEnd(System.String,System.DateTime)">
+            <summary>
+            获取 本周、本月、本季度、本年 的结束时间
+            </summary>
+            <param name="TimeType">Week、Month、Season、Year</param>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.TypeCommon">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeCommon.GetType``1">
+            <summary>
+            获取类型
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeCommon.GetType(System.Type)">
+            <summary>
+            获取类型
+            </summary>
+            <param name="type">类型</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeCommon.IsEnum(System.Type)">
+            <summary>
+            判断是否枚举
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.TypeConversionCommon">
+            <summary>
+            类型转换
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToChar(System.Object,System.Char)">
+            <summary>
+            obj转Char
+            </summary>
+            <param name="obj">待转换参数</param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToChar(System.Object,System.Nullable{System.Char})">
+            <summary>
+            obj转Char
+            </summary>
+            <param name="obj">待转换参数</param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToChar(System.Object,System.Func{System.Nullable{System.Char}})">
+            <summary>
+            obj转Char
+            </summary>
+            <param name="obj">待转换参数</param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToGuid(System.Object,System.Guid)">
+            <summary>
+            obj转Guid
+            </summary>
+            <param name="obj">待转换参数</param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToGuid(System.Object,System.Nullable{System.Guid})">
+            <summary>
+            obj转Guid
+            </summary>
+            <param name="obj">待转换参数</param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToGuid(System.Object,System.Func{System.Nullable{System.Guid}})">
+            <summary>
+            obj转Guid
+            </summary>
+            <param name="obj">待转换参数</param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToShort(System.Object,System.Int16)">
+            <summary>
+            obj转Short
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToShort(System.Object,System.Nullable{System.Int16})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToShort(System.Object,System.Func{System.Nullable{System.Int16}})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToInt(System.Object,System.Int32)">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToInt(System.Object,System.Nullable{System.Int32})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToInt(System.Object,System.Func{System.Nullable{System.Int32}})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToLong(System.Object,System.Int64)">
+            <summary>
+            obj转long
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToLong(System.Object,System.Nullable{System.Int64})">
+            <summary>
+            obj转long
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToLong(System.Object,System.Func{System.Nullable{System.Int64}})">
+            <summary>
+            obj转long
+            </summary>
+            <param name="obj"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDecimal(System.Object,System.Decimal)">
+            <summary>
+            obj转decimal
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDecimal(System.Object,System.Nullable{System.Decimal})">
+            <summary>
+            obj转decimal
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDecimal(System.Object,System.Func{System.Nullable{System.Decimal}})">
+            <summary>
+            obj转decimal
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDouble(System.Object,System.Double)">
+            <summary>
+            obj转double
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDouble(System.Object,System.Nullable{System.Double})">
+            <summary>
+            obj转double
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDouble(System.Object,System.Func{System.Nullable{System.Double}})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToFloat(System.Object,System.Single)">
+            <summary>
+            obj转float
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToFloat(System.Object,System.Nullable{System.Single})">
+            <summary>
+            obj转float
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToFloat(System.Object,System.Func{System.Nullable{System.Single}})">
+            <summary>
+            obj转float
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDateTime(System.Object,System.DateTime)">
+            <summary>
+            obj转datetime
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDateTime(System.Object,System.Nullable{System.DateTime})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToDateTime(System.Object,System.Func{System.Nullable{System.DateTime}})">
+            <summary>
+            obj转dateTime
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByte(System.Object,System.Byte)">
+            <summary>
+            obj转byte
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByte(System.Object,System.Nullable{System.Byte})">
+            <summary>
+            obj转byte
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByte(System.Object,System.Func{System.Nullable{System.Byte}})">
+            <summary>
+            obj转Int
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByteArray(System.Object)">
+            <summary>
+            转为字节数组
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToSByte(System.Object,System.SByte)">
+            <summary>
+            obj转sbyte
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToSByte(System.Object,System.Nullable{System.SByte})">
+            <summary>
+            obj转sbyte
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToSByte(System.Object,System.Func{System.Nullable{System.SByte}})">
+            <summary>
+            obj转sbyte
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Common.TypeConversionCommon._boolMap">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToBool(System.Object,System.Boolean)">
+            <summary>
+            obj转bool
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToBool(System.Object,System.Nullable{System.Boolean})">
+            <summary>
+            obj转bool
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToBool(System.Object,System.Func{System.Nullable{System.Boolean}})">
+            <summary>
+            obj转bool
+            </summary>
+            <param name="obj"></param>
+            <param name="func">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToSpecifyType(System.Object,System.Type)">
+            <summary>
+            对可空类型进行判断转换
+            </summary>
+            <param name="value">DataReader字段的值</param>
+            <param name="conversionType">该字段的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeType``1(System.Object)">
+            <summary>
+            更改源参数类型（适用于简单的类型转换，序列化反序列化不适用）
+            </summary>
+            <param name="obj">源数据</param>
+            <typeparam name="T">类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeType``1(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            更改源参数类型集合（适用于简单的类型转换，序列化反序列化不适用）
+            </summary>
+            <param name="objList">源数据集合</param>
+            <typeparam name="T">类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeType``1(System.Object[])">
+            <summary>
+            更改源参数类型集合（适用于简单的类型转换，序列化反序列化不适用）
+            </summary>
+            <param name="objArray">源数据集合</param>
+            <typeparam name="T">类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByteArray(System.IO.Stream)">
+            <summary>
+            Stream转换为Byte数组
+            </summary>
+            <param name="stream">Stream</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByteArrayAsync(System.IO.Stream)">
+            <summary>
+            流转换为字节流
+            </summary>
+            <param name="stream">流</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByteArrayAsync(System.IO.Stream,System.Boolean)">
+            <summary>
+            流转换为字节流
+            </summary>
+            <param name="stream"></param>
+            <param name="isSync"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByteArray(System.String)">
+            <summary>
+            String转换为Byte数组
+            </summary>
+            <param name="para">待转换参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByteArray(System.String,System.Text.Encoding)">
+            <summary>
+            String转换为Byte数组
+            </summary>
+            <param name="para">待转换参数</param>
+            <param name="encoding">编码格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToStream(System.Byte[])">
+            <summary>
+            将 byte[] 转成 Stream
+            </summary>
+            <param name="bytes">byte数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.CopyToStringAsync(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            复制流并转换成字符串
+            </summary>
+            <param name="stream">流</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToString(System.IO.Stream)">
+            <summary>
+            文件流转字符串
+            </summary>
+            <param name="stream">文件流</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToString(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)">
+            <summary>
+            文件流转字符串
+            </summary>
+            <param name="stream">文件流</param>
+            <param name="encoding">编码格式</param>
+            <param name="bufferSize">缓冲区大小</param>
+            <param name="isCloseStream">是否自动释放文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToStringAsync(System.IO.Stream)">
+            <summary>
+            文件流转字符串
+            </summary>
+            <param name="stream">文件流</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToStringAsync(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)">
+            <summary>
+            文件流转字符串
+            </summary>
+            <param name="stream">文件流</param>
+            <param name="encoding">编码格式</param>
+            <param name="bufferSize">缓冲区大小</param>
+            <param name="isCloseStream">是否自动释放文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToStringAsync(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            文件流转字符串
+            </summary>
+            <param name="stream">文件流</param>
+            <param name="encoding">编码格式</param>
+            <param name="isSync">是否同步</param>
+            <param name="bufferSize">缓冲区大小</param>
+            <param name="isCloseStream">是否自动释放文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToString(System.Byte[])">
+            <summary>
+            byte数组转换为string
+            </summary>
+            <param name="bytes">byte数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToByte(System.String)">
+            <summary>
+            文件base64转byte数组
+            </summary>
+            <param name="base64">文件base64</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToBase64(System.Byte[])">
+            <summary>
+            byte数组转换为base64
+            </summary>
+            <param name="param">byte数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToBase64(System.IO.Stream)">
+            <summary>
+            文件流转换为base64
+            </summary>
+            <param name="stream">文件流</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertToBase64Async(System.IO.Stream)">
+            <summary>
+            文件流转换为base64
+            </summary>
+            <param name="stream">文件流</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ClearDecimal(System.String)">
+            <summary>
+            保留两位小数并对其四舍五入，如果最后的两位小数为*.00则去除小数位，否则保留两位小数
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.GetContentByEncryption(System.Nullable{System.Char},System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            加密显示以*表示
+            </summary>
+            <param name="number">显示N位*,-1默认显示6位</param>
+            <param name="symbol">特殊符号，默认为*</param>
+            <param name="errCode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.GetContentByEncryption(System.String,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            加密显示以*表示
+            </summary>
+            <param name="symbol">特殊符号，默认为*</param>
+            <param name="number">显示N次*,-1默认显示6位</param>
+            <param name="errCode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertStringToUnicode(System.String)">
+            <summary>
+            汉字转换为Unicode编码
+            </summary>
+            <param name="str">要编码的汉字字符串</param>
+            <returns>Unicode编码的的字符串</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ConvertUnicodeToString(System.String)">
+            <summary>
+            将Unicode编码转换为汉字字符串
+            </summary>
+            <param name="str">Unicode编码字符串</param>
+            <returns>汉字字符串</returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeResult(System.Nullable{System.Int32}@,System.Nullable{System.Int32}@)">
+            <summary>
+            值互换(左边最小值,右边最大值)
+            </summary>
+            <param name="minParameter">最小值</param>
+            <param name="maxParameter">最大值</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeResult(System.Nullable{System.Byte}@,System.Nullable{System.Byte}@)">
+            <summary>
+            值互换(左边最小值,右边最大值)
+            </summary>
+            <param name="minParameter">最小值</param>
+            <param name="maxParameter">最大值</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeResult(System.Nullable{System.Single}@,System.Nullable{System.Single}@)">
+            <summary>
+            值互换(左边最小值,右边最大值)
+            </summary>
+            <param name="minParameter">最小值</param>
+            <param name="maxParameter">最大值</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeResult(System.Nullable{System.Double}@,System.Nullable{System.Double}@)">
+            <summary>
+            值互换(左边最小值,右边最大值)
+            </summary>
+            <param name="minParameter">最小值</param>
+            <param name="maxParameter">最大值</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeResult(System.Nullable{System.Decimal}@,System.Nullable{System.Decimal}@)">
+            <summary>
+            值互换(左边最小值,右边最大值)
+            </summary>
+            <param name="minParameter">最小值</param>
+            <param name="maxParameter">最大值</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.TypeConversionCommon.ChangeResult(System.Nullable{System.DateTime}@,System.Nullable{System.DateTime}@)">
+            <summary>
+            值互换(左边最小值,右边最大值)
+            </summary>
+            <param name="minParameter">最小值</param>
+            <param name="maxParameter">最大值</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.UrlCommon">
+            <summary>
+            url处理公共类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.GetQueryString(System.String,System.Text.Encoding,System.Boolean)">
+            <summary>
+            将查询字符串解析转换为名值集合
+            </summary>
+            <param name="queryString">需要查询的字符串</param>
+            <param name="encoding">编码格式 isEncoded 为 true时需要传入编码格式</param>
+            <param name="isEncoded">是否需要Encoded编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.MyUrlDeCode(System.String,System.Text.Encoding)">
+            <summary>
+            解码URL
+            </summary>
+            <param name="encoding">null为自动选择编码</param>
+            <param name="str">需要解码的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.GetUrl(System.String)">
+            <summary>
+            得到url地址
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.UrlEncode(System.String)">
+            <summary>
+            Url编码
+            </summary>
+            <param name="target">待加密字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.UrlEncode(System.String,System.Text.Encoding)">
+            <summary>
+            Url编码
+            </summary>
+            <param name="target">待加密字符串</param>
+            <param name="encoding">编码类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.UrlDecode(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="target">待解密字符串</param>
+             <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.UrlDecode(System.String,System.Text.Encoding)">
+            <summary>
+            Url解码
+            </summary>
+            <param name="target">待解密字符串</param>
+            <param name="encoding">编码类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.AttributeEncode(System.String)">
+            <summary>
+            Html属性编码
+            </summary>
+            <param name="target">待加密字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.HtmlEncode(System.String)">
+            <summary>
+            Html编码
+            </summary>
+            <param name="target">待加密字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.UrlCommon.HtmlDecode(System.String)">
+            <summary>
+            Html解码
+            </summary>
+            <param name="target">待解密字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.ValidateCommon">
+            <summary>
+            验证方法
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsDouble(System.Object)">
+            <summary>
+            是否为Double类型
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsDecimal(System.Object)">
+            <summary>
+            是否为Decimal类型
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsLong(System.Object)">
+            <summary>
+            是否为Long类型
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsInt(System.Object)">
+            <summary>
+            是否为Int类型
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsMobile(System.String)">
+            <summary>
+            判断是否是手机号
+            </summary>
+            <param name="mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsCard(System.String)">
+            <summary>
+            判断是否是身份证（通用）
+            </summary>
+            <param name="card">身份证号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsIDCard18(System.String)">
+            <summary>
+            身份证符合18位身份证标准
+            </summary>
+            <param name="card">身份证号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsIDCard15(System.String)">
+            <summary>
+            身份证符合15位身份证标准
+            </summary>
+            <param name="card">身份证号码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsUrl(System.String)">
+            <summary>
+            判断是否为url
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.HasUrl(System.String)">
+            <summary>
+            判断是否为url
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsEmail(System.String)">
+            <summary>
+            验证是否为邮箱
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.HasEmail(System.String)">
+            <summary>
+            是否包含有限
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.IsIP(System.String)">
+            <summary>
+            验证IP
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.ValidateCommon.HasIP(System.String)">
+            <summary>
+            是否有ip
+            </summary>
+            <param name="str">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Common.XmlCommon">
+            <summary>
+            xml方法
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.XmlCommon.ConvertXmlToString(System.Xml.XmlDocument)">
+            <summary>
+            将XmlDocument转化为string
+            </summary>
+            <param name="xmlDoc">xml对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.XmlCommon.XMLSerialize``1(``0)">
+            <summary>
+            XML序列化
+            </summary>
+            <typeparam name="T">返回参数</typeparam>
+            <param name="obj">XML</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Common.XmlCommon.XMLDeserialize``1(System.String)">
+            <summary>
+            Xml反序列化
+            </summary>
+            <typeparam name="T">返回参数</typeparam>
+            <param name="xml">XML</param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Crontab.Quartz.Attributes.JobAttribute">
+            <summary>
+            定时任务验证类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.Attributes.JobAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">定时任务名称</param>
+            <param name="group">定时任务分组</param>
+            <param name="cornExpression">定时任务corn表达式</param>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Crontab.Quartz.Attributes.JobAttribute.Name">
+            <summary>
+            定时任务名称
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Crontab.Quartz.Attributes.JobAttribute.Group">
+            <summary>
+            定时任务分组
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Crontab.Quartz.Attributes.JobAttribute.CornExpression">
+            <summary>
+            定时任务Corn表达式
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.Factory.DependencyInjectionJobFactory.NewJob(Quartz.Spi.TriggerFiredBundle,Quartz.IScheduler)">
+            <summary>
+            创建一个新任务
+            </summary>
+            <param name="bundle">触发器</param>
+            <param name="scheduler">调度器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.Factory.DependencyInjectionJobFactory.ReturnJob(Quartz.IJob)">
+            <summary>
+            释放任务
+            </summary>
+            <param name="job">任务</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.JobBase.Execute(Quartz.IJobExecutionContext)">
+            <summary>
+            执行定时任务
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.JobBase.Processing">
+            <summary>
+            抽象方法 定时任务执行顺序写在此处
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.JobBase.GetService``1">
+            <summary>
+            获取服务信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Crontab.Quartz.JobBase.ServerProvider">
+            <summary>
+            服务提供者
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Crontab.Quartz.JobHostedService">
+            <summary>
+            定时任务job服务
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.JobHostedService.StartAsync(System.Threading.CancellationToken)">
+            <summary>
+            生命周期线程开始方法
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Crontab.Quartz.JobHostedService.StopAsync(System.Threading.CancellationToken)">
+            <summary>
+            生命周期线程结束方法
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.DbConnectionExtensions.ConvertReaderToList``1(System.Data.IDataReader)">
+            <summary>
+            转换DataReader
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="objReader">数据库的DataReader</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.Interface.IMySqlConnection.Execute(System.String)">
+            <summary>
+            添加/编辑
+            </summary>
+            <param name="sql">sql语句</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.Interface.IMySqlConnection.Execute(System.String,System.Object[])">
+            <summary>
+            添加/编辑
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql语句拼接的参数</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.Interface.IMySqlConnection.Query``1(System.String,System.Func{System.Data.IDataReader,``0},System.Object[])">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">返回值类型</typeparam>
+            <param name="sql">sql语句</param>
+            <param name="func">委托（用来修改返回参数）</param>
+            <param name="sqlParams">可拼接的sqlParams</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.Interface.IMySqlConnection.Query``1(System.String,System.Object[])">
+            <summary>
+            查询（直接返回列表）
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql语句的sqlParams</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.MySql.Execute(System.String)">
+            <summary>
+            添加/编辑
+            </summary>
+            <param name="sql">sql语句</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.MySql.Execute(System.String,System.Object[])">
+            <summary>
+            添加/编辑
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql语句拼接的参数</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.MySql.Query``1(System.String,System.Func{System.Data.IDataReader,``0},System.Object[])">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sql">sql语句</param>
+            <param name="func">委托（用来修改返回参数）</param>
+            <param name="sqlParams">可拼接的sqlParams</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.DbConnection.MySql.MySql.Query``1(System.String,System.Object[])">
+            <summary>
+            查询（直接返回列表）
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql语句的sqlParams</param>
+            <returns></returns>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.DbConnection.MySql.Options.MySqlOptions.ConnectionString">
+            <summary>
+            Gets or sets the database's connection string that will be used to store database entities.
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Elasticsearch.Factory.ElasticClientFactory.CreateClient">
+            <summary>
+            创建数据链接实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Elasticsearch.Factory.IElasticClientFactory.CreateClient">
+            <summary>
+            创建数据链接实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Elasticsearch.Options.ElasticClientOptions.Url">
+            <summary>
+            Elasticsearch服务地址
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Elasticsearch.Options.ElasticClientOptions.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Elasticsearch.Options.ElasticClientOptions.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Event.Attributes.DomainEventAttribute">
+            <summary>
+            事件Attribute 只有带了此标识才会被认为事件（使用此标识需要注册启动 DomainEvent.Enable()）
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Event.Delegate.CustomEventHandlers">
+            <summary>
+            自定义EventHandler
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Event.Delegate.CustomEventHandlers.DomainEventHandler`1">
+            <summary>
+            委托
+            </summary>
+            <typeparam name="TEventArgs">泛型类型</typeparam>
+            <param name="e">参数信息</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Event.DomainEvent">
+            <summary>
+            领域事件
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Event.DomainEvent.Register">
+            <summary>
+            注册领域事件
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Exceptions.BadRequestException">
+            <summary>
+            请求参数有误的错误
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.BadRequestException.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="message">错误消息</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.BusinessException.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="message">错误消息</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Exceptions.ForbiddenException">
+            <summary>
+            无权访问的错误
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.ForbiddenException.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="message">错误消息</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Exceptions.HttpException">
+            <summary>
+            Copyright (C) 2018-2099
+            CLR版本:          4.0.30319.42000
+            机器名称:         DESKTOP-FLSPMG3
+            创建人:           lkk 
+            邮箱:             15757107211@163.com
+            创建时间:         2018/4/5 22:32:23
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Exceptions.HttpException.StatusCode">
+            <summary>
+            Status code<br/>
+            状态码<br/>
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.HttpException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initialize<br/>
+            初始化<br/>
+            </summary>
+            <param name="statusCode">Status code</param>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Exceptions.NotFoundException">
+            <summary>
+            页面或资源无法找到的错误
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.NotFoundException.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="message">错误消息</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.ServerException.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="message">错误消息</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Exceptions.UserFriendlyException.#ctor(System.String,System.Int32)">
+            <summary>
+            友好异常 
+            </summary>
+            <param name="statusCode">状态码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Extensions.PropertyComparerExtension`1">
+            <summary>
+            Distinct指定字段排序
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Extensions.PropertyComparerExtension`1.#ctor(System.String)">
+            <summary>
+            通过propertyName 获取PropertyInfo对象    
+            </summary>
+            <param name="propertyName">仅支持字段名（区分大小写）</param>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Http.HttpClientFactory.Client">
+            <summary>
+            使用此类库需要在StartUp注入AddHttpClient
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="httpClient"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetAsync``1(System.String)">
+            <summary>
+            Get请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetAsync``1(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Get请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="query">查询字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetAsync``1(System.String,System.String)">
+            <summary>
+            Get请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="jwtToken">Token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetAsync``1(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Get请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="query">查询字符串</param>
+            <param name="jwtToken">Token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetAsync``1(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Get请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="query">查询字符串</param>
+            <param name="headers">请求头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetByteAsync(System.String)">
+            <summary>
+            Get请求
+            </summary>
+            <param name="url">请求路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetStringAsync(System.String)">
+            <summary>
+            Get请求
+            </summary>
+            <param name="url">请求路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetStringAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Get请求
+            </summary>
+            <param name="url">请求路径</param>
+            <param name="query">查询字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.GetStringAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Get请求
+            </summary>
+            <param name="url">请求路径</param>
+            <param name="query">查询字符串</param>
+            <param name="headers">请求头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.PostAsync``1(System.String,System.Object)">
+            <summary>
+            Post请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="data">Body数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.PostAsync``1(System.String,System.Object,System.String)">
+            <summary>
+            Post请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="data">Body数据</param>
+            <param name="jwtToken">Token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.PostAsync``1(System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Post请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="data">Body数据</param>
+            <param name="headers">请求头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.PostAsync(System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Post请求
+            </summary>
+            <param name="url">请求路径</param>
+            <param name="data">Body数据</param>
+            <param name="headers">请求头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.PostAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Post请求
+            </summary>
+            <typeparam name="TResult">结果对象</typeparam>
+            <param name="url">请求路径</param>
+            <param name="data">Body数据</param>
+            <param name="headers">请求头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.HttpClientFactory.Client.PostAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Post请求
+            </summary>
+            <param name="url">请求路径</param>
+            <param name="data">Body数据</param>
+            <param name="headers">请求头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.RestSharp.RestSharpClient.Post(System.String,System.Object,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            发送POST请求
+            </summary>
+            <param name="url">请求url</param>
+            <param name="data">参数信息</param>
+            <param name="apiHost">请求域</param>
+            <param name="headerList">头信息</param>
+            <param name="dataType">参数类型 默认 json</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.RestSharp.RestSharpClient.Get(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发送get请求
+            </summary>
+            <param name="url">请求url</param>
+            <param name="apiHost">请求域</param>
+            <param name="data">携带参数</param>
+            <param name="headerList">头信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Http.RestSharp.RestSharpClient.FormData(System.String,System.Object,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            form-data请求
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="data">请求参数</param>
+            <param name="apiHost">请求域名</param>
+            <param name="files">流参数信息</param>
+            <param name="headerList">头信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.#ctor(InfluxData.Net.InfluxDb.ClientModules.IBasicClientModule,Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions)">
+            <summary>
+            
+            </summary>
+            <param name="basicClientModule"></param>
+            <param name="clientOptions"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.MultiQueryAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int64})">
+            <summary>
+            查询
+            </summary>
+            <param name="queries"></param>
+            <param name="dbName"></param>
+            <param name="epochFormat"></param>
+            <param name="chunkSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.QueryAsync(System.String,System.String,System.String,System.Nullable{System.Int64})">
+            <summary>
+            查询
+            </summary>
+            <param name="query"></param>
+            <param name="dbName"></param>
+            <param name="epochFormat"></param>
+            <param name="chunkSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.QueryAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Int64})">
+            <summary>
+            查询
+            </summary>
+            <param name="queries"></param>
+            <param name="dbName"></param>
+            <param name="epochFormat"></param>
+            <param name="chunkSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.QueryAsync(System.String,System.Object,System.String,System.String,System.Nullable{System.Int64})">
+            <summary>
+            查询
+            </summary>
+            <param name="queryTemplate"></param>
+            <param name="parameters"></param>
+            <param name="dbName"></param>
+            <param name="epochFormat"></param>
+            <param name="chunkSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.WriteAsync(InfluxData.Net.InfluxDb.Models.Point,System.String,System.String,System.String)">
+            <summary>
+            插入
+            </summary>
+            <param name="point"></param>
+            <param name="dbName"></param>
+            <param name="retentionPolicy"></param>
+            <param name="precision"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.BasicClientModuleDecorator.WriteAsync(System.Collections.Generic.IEnumerable{InfluxData.Net.InfluxDb.Models.Point},System.String,System.String,System.String)">
+            <summary>
+            写入
+            </summary>
+            <param name="points"></param>
+            <param name="dbName"></param>
+            <param name="retentionPolicy"></param>
+            <param name="precision"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.Extensions.BasicClientModuleExtensions.AddAsync``1(InfluxData.Net.InfluxDb.ClientModules.IBasicClientModule,``0,System.String,System.String)">
+            <summary>
+            添加数据
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="basicClientModule">Influx client</param>
+            <param name="entity">实体</param>
+            <param name="dbName">数据库名称（可指定，不指定走默认）</param>
+            <param name="retentionPolicy">策略名称（不传不走策略，传值走策略）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.Extensions.BasicClientModuleExtensions.GetListAsync``1(InfluxData.Net.InfluxDb.ClientModules.IBasicClientModule,System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="basicClientModule">Influx client</param>
+            <param name="querySql">查询sql语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.Extensions.BasicClientModuleExtensions.GetFirstOrDefaultAsync``1(InfluxData.Net.InfluxDb.ClientModules.IBasicClientModule,System.String)">
+            <summary>
+            查询单条数据
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="basicClientModule">Influx client</param>
+            <param name="querySql">查询sql语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.Extensions.BasicClientModuleExtensions.GetPageListAsync``1(InfluxData.Net.InfluxDb.ClientModules.IBasicClientModule,System.String)">
+            <summary>
+            分页查询
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="basicClientModule">Influx client</param>
+            <param name="querySql">查询语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.InfluxDbClientDecorator.EnsureDatabaseCreated(System.String)">
+            <summary>
+            生成数据库
+            </summary>
+            <param name="dbName"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.InfluxDbClientDecorator.EnsureRetentionPolicyCreated(InfluxData.Net.InfluxDb.Models.Responses.RetentionPolicy,System.String)">
+            <summary>
+            创建策略
+            </summary>
+            <param name="defaultPolicy"></param>
+            <param name="dbName"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.InfluxDb.InfluxDbClientFactory.CreateClient">
+            <summary>
+            创建Client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions.Url">
+            <summary>
+            数据链接字符串
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions.User">
+            <summary>
+            数据库登录的用户名
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions.DbName">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions.RetentionPolicies">
+            <summary>
+            策略集合（可生成你自己的策略，只进行生成策略）
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.RabbitMQ.Interface.IRabbitMQPublisher.Publish``1(System.String,``0,System.String)">
+            <summary>
+            发送RabbitMQ消息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="routeKey">路由key</param>
+            <param name="contentObj">参数信息</param>
+            <param name="exchangeType">交换机类型（默认：Direct，暂不支持：Headers）</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.RabbitMQ.Interface.IRabbitMQPublisher.Publish``1(System.String,System.String,``0,System.String)">
+            <summary>
+            发送RabbitMQ消息（当前方法会直接声明队列）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queueName">队列名称</param>
+            <param name="routeKey">路由key</param>
+            <param name="contentObj">参数信息</param>
+            <param name="exchangeType">交换机类型（默认：Direct，暂不支持：Headers）</param>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.HostName">
+            <summary>
+            The host to connect to.
+            If you want connect to the cluster, you can assign like “192.168.1.111,192.168.1.112”
+            RabbitMQ服务地址
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.Password">
+            <summary>
+            Password to use when authenticating to the server.
+            RabbitMQ服务密码
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.UserName">
+            <summary>
+            Username to use when authenticating to the server.
+            RabbitMQ服务用户名
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.VirtualHost">
+            <summary>
+            Virtual host to access during this connection.
+            RabbitMQ服务虚拟机地址
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.ExchangeName">
+            <summary>
+            Topic exchange name when declare a topic exchange.
+            RabbitMQ服务交换机名称
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.Port">
+            <summary>
+            The port to connect on.
+            RabbitMQ服务端口
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.QueueMessageExpires">
+            <summary>
+            Gets or sets queue message automatic deletion time (in milliseconds). Default 864000000 ms (10 days).
+            RabbitMQ服务队列过期时间
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.Durable">
+            <summary>
+            消息队列持久化  false 时 重启服务消息队列会消失  true 则不会
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.AutoDelete">
+            <summary>
+            当已经没有消费者时，服务器是否可以删除该交换机
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.ExchangeType">
+            <summary>
+            交换机类型
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions.ConnectionFactoryOptions">
+            <summary>
+            RabbitMQ native connection factory options
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.RabbitMQ.RabbitMQPublisher.Publish``1(System.String,``0,System.String)">
+            <summary>
+            发送RabbitMQ消息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="routeKey">路由key</param>
+            <param name="contentObj">参数信息</param>
+            <param name="exchangeType">交换机类型（默认：Direct，暂不支持：DotNetCore.CAP.Messages.Headers）</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.RabbitMQ.RabbitMQPublisher.Publish``1(System.String,System.String,``0,System.String)">
+            <summary>
+            发送RabbitMQ消息（当前方法会直接声明队列）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queueName">队列名称</param>
+            <param name="routeKey">路由key</param>
+            <param name="contentObj">参数信息</param>
+            <param name="exchangeType">交换机类型（默认：Direct，暂不支持：DotNetCore.CAP.Messages.Headers）</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.RabbitMQ.RabbitMQPublisher.CreateConnection(Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions)">
+            <summary>
+            创建rabbitmq链接
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Startup">
+            <summary>
+            基础类库启动类
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Startup.AddQuartz(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            添加Quartz定时任务
+            </summary>
+            <param name="services">服务集合</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Startup.AddElasticClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Extension.Infrastructure.Elasticsearch.Options.ElasticClientOptions})">
+            <summary>
+            添加Elasticsearch服务
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Startup.AddInfluxDbClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Extension.Infrastructure.InfluxDb.Options.InfluxDbClientOptions})">
+            <summary>
+            添加InfluxDb服务
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">操作信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Startup.AddRabbitMQExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Extension.Infrastructure.RabbitMQ.Options.RabbitMQOptions})">
+            <summary>
+            添加拓展RabbitMQ拓展方法
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Startup.AddOssClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions})">
+            <summary>
+            添加Oss上传服务
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">Oss配置信息</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Startup.AddMySqlServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Application.Extension.Infrastructure.DbConnection.MySql.Options.MySqlOptions})">
+            <summary>
+            添加MySql Sql语句查询服务
+            </summary>
+            <param name="services">服务集合</param>
+            <param name="optionsBuilder">配置信息</param>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.GIF">
+            <summary>
+            GIF
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.JPG">
+            <summary>
+            GIF
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.GPEG">
+            <summary>
+            GPEG
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.PNG">
+            <summary>
+            PNG
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.BMP">
+            <summary>
+            BMP
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.MP3">
+            <summary>
+            MP3
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.WMA">
+            <summary>
+            WMA
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.WAV">
+            <summary>
+            WAV
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.AMR">
+            <summary>
+            AMR
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.MP4">
+            <summary>
+            MP4
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.XLSX">
+            <summary>
+            XLSX
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.PDF">
+            <summary>
+            PDF
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.TXT">
+            <summary>
+            TXT
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.DOC">
+            <summary>
+            DOC
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.XLS">
+            <summary>
+            XLS
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.ZIP">
+            <summary>
+            ZIP
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.CSV">
+            <summary>
+            CSV
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.PPT">
+            <summary>
+            PPT
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.PPTX">
+            <summary>
+            PPTX
+            </summary>
+        </member>
+        <member name="F:Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum.DOCX">
+            <summary>
+            DOCX
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices">
+            <summary>
+            阿里云Oss上传下载服务
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.GenerateAuthQuery(System.String)">
+            <summary>
+            拼接域名前缀
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.RemoveUrlPrefix(System.String)">
+            <summary>
+            移除域名前缀
+            </summary>
+            <param name="authQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Upload(System.IO.Stream)">
+            <summary>
+            智能上传（假如流类型推断失败请使用指定文件类型上传）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Upload(System.IO.Stream,System.String)">
+            <summary>
+            智能上传（假如流类型推断失败请使用指定文件类型上传）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="path">oss文件存储地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Upload(System.IO.Stream,System.String,System.String)">
+            <summary>
+            指定文件类型上传
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="fileSuffix">文件后缀（例：.jpg）</param>
+            <param name="contentType">内容类型（例：image/jpeg）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Upload(System.IO.Stream,System.String,System.String,System.String)">
+            <summary>
+            指定文件类型上传
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="path">oss文件存储地址</param>
+            <param name="fileSuffix">文件后缀（例：.jpg）</param>
+            <param name="contentType">内容类型（例：image/jpeg）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Upload(System.IO.Stream,Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum)">
+            <summary>
+            指定文件类型上传（部分类型不支持）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="fileType">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Upload(System.IO.Stream,System.String,Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum)">
+            <summary>
+            指定文件类型上传（部分类型不支持）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="path">oss文件存储地址</param>
+            <param name="fileType">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Download(System.String)">
+            <summary>
+            下载
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.BatchDelete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除集合
+            </summary>
+            <param name="pathList"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.GetPlatformLink(System.String,System.Boolean)">
+            <summary>
+            智能转换链接为本平台链接
+            </summary>
+            <param name="url">url地址  必须是url地址</param>
+            <param name="isNeedPrefix">是否需要携带域名前缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.Interface.IOssFileServices.GetPlatformLink(System.String,System.String,System.Boolean)">
+            <summary>
+            智能转换链接为本平台链接
+            </summary>
+            <param name="url">url地址</param>
+            <param name="path">oss文件存储地址</param>
+            <param name="isNeedPrefix">是否需要携带域名前缀</param>
+            <returns></returns>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.AliyunDomain">
+            <summary>
+            阿里云绑定的域名
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.AliyunPrefix">
+            <summary>
+            阿里云路径的前缀
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.AliyunEndPoint">
+            <summary>
+            阿里云EndPoint
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.AliyunAccessKeyId">
+            <summary>
+            阿里云AccessKeyId
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.AliyunAccessKeySecret">
+            <summary>
+            阿里云AccessKeySecret
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.AliyunBucketName">
+            <summary>
+            阿里云BucketName
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.IsPresignedUri">
+            <summary>
+            是否是PresignedUri
+            </summary>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.Options.AliyunOssOptions.DownEndPoint">
+            <summary>
+            下载结束标识
+            </summary>
+        </member>
+        <member name="T:Application.Extension.Infrastructure.Storage.Oss.OssFileServices">
+            <summary>
+            阿里云Oss上传下载服务
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.GenerateAuthQuery(System.String)">
+            <summary>
+            生成Url授权
+            </summary>
+            <param name="url">文件存储路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.RemoveUrlPrefix(System.String)">
+            <summary>
+            去除url前缀（域名和endpoint）
+            </summary>
+            <param name="authQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Upload(System.IO.Stream)">
+            <summary>
+            智能上传（假如流类型推断失败请使用指定文件类型上传）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Upload(System.IO.Stream,System.String)">
+            <summary>
+            智能上传（假如流类型推断失败请使用指定文件类型上传）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="path">oss文件存储地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Upload(System.IO.Stream,System.String,System.String)">
+            <summary>
+            指定文件类型上传
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="fileSuffix">文件后缀（例：.jpg）</param>
+            <param name="contentType">内容类型（例：image/jpeg）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Upload(System.IO.Stream,System.String,System.String,System.String)">
+            <summary>
+            指定文件类型上传
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="path">oss文件存储地址</param>
+            <param name="fileSuffix">文件后缀（例：.jpg）</param>
+            <param name="contentType">内容类型（例：image/jpeg）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Upload(System.IO.Stream,Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum)">
+            <summary>
+            指定文件类型上传（部分类型不支持）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="fileType">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Upload(System.IO.Stream,System.String,Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum)">
+            <summary>
+            指定文件类型上传（部分类型不支持）
+            </summary>
+            <param name="stream">文件流信息</param>
+            <param name="path">oss文件存储地址</param>
+            <param name="fileType">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Download(System.String)">
+            <summary>
+            下载
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.BatchDelete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除集合
+            </summary>
+            <param name="pathList"></param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.GetPlatformLink(System.String,System.Boolean)">
+            <summary>
+            智能转换链接为本平台链接
+            </summary>
+            <param name="url">url地址</param>
+            <param name="isNeedPrefix">是否需要携带域名前缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.GetPlatformLink(System.String,System.String,System.Boolean)">
+            <summary>
+            智能转换链接为本平台链接
+            </summary>
+            <param name="url">url地址</param>
+            <param name="path">oss文件存储地址</param>
+            <param name="isNeedPrefix">是否需要携带域名前缀</param>
+            <returns></returns>
+        </member>
+        <member name="P:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.OssClient">
+            <summary>
+            Oss请求
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.GetPath(System.String,System.String)">
+            <summary>
+            生成文件路径（默认）
+            </summary>
+            <param name="prefix"></param>
+            <param name="fileType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Storage.Oss.OssFileServices.GetFileTypeInfo(Application.Extension.Infrastructure.Storage.Oss.Enum.FileTypeEnum)">
+            <summary>
+            获取文件类型信息
+            </summary>
+            <param name="fileType">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.ThreadTask.TaskExtension.ExecuteTasks(System.Collections.Generic.List{System.Action})">
+            <summary>
+            执行任务（快速执行任务委托，简化重复代码）
+            </summary>
+            <param name="tasks">任务集合</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.ReadText(System.String)">
+            <summary>
+            读取文本文件
+            </summary>
+            <param name="url">文本文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.MergeImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            图片合并（操作原理，简单的图片叠加）
+            </summary>
+            <param name="picOneBase64Str">第一张图（背景图，第二张图需要叠加到第一张上）</param>
+            <param name="picTwoBase64Str">第二张图（需要比第一张图小）</param>
+            <param name="x">坐标x</param>
+            <param name="y">坐标y</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.DrawText(System.String,System.Func{SixLabors.Fonts.FontFamily,SixLabors.Fonts.Font},System.String,System.ValueTuple{System.String,SixLabors.ImageSharp.Color,System.Int32,System.Int32}[])">
+            <summary>
+            将文字写入图片上
+            </summary>
+            <param name="picBase64Str">图片base64编码 注：请将,前面的image字段删除</param>
+            <param name="fontFunc">委托，用来处理你自己的方法</param>
+            <param name="textInfos">文本信息 一个文本对应一个坐标对应一个颜色</param>
+            <param name="typeface">字体 默认微软字体 SIMHEI.TTF（只能使用微软字体）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.GetDateTime">
+            <summary>
+            获取当前服务器标准时间（假设服务器是utc时间，此方法用来获取标准时间）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.ConvertIntDatetime(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="utc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.JsonDeserialize``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.JsonDeserialize(System.String,System.Type)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="o"></param>
+            <param name="type">参数类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.JsonSerializer(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.PagesGet(System.Int32,System.Int32@,System.Int32)">
+            <summary>
+            分页用法(获取分页后的页数)
+            </summary>
+            <param name="count">总条数</param>
+            <param name="pageSize">一页多少条（默认一页50条）</param>
+            <param name="pages">输出参数 一共多少页</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.PagesGet(System.Int64,System.Int64@,System.Int64)">
+            <summary>
+            分页用法(获取分页后的页数)
+            </summary>
+            <param name="count">总条数</param>
+            <param name="pageSize">一页多少条（默认一页50条）</param>
+            <param name="pages">输出参数 一共多少页</param>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.GetMemoryCache">
+            <summary>
+            获取本地缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.ASCIIDictionary(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            将字典值进行ASCII排序
+            </summary>
+            <param name="dic">字典值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.FindRepeat(System.Int32[])">
+            <summary>
+            获取数组中重复的数字
+            </summary>
+            <param name="data">数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Utils.FindRepeat(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            获取数组中重复的数字
+            </summary>
+            <param name="data">数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Validator.Validator.Register">
+            <summary>
+            注册验证信息
+            </summary>
+        </member>
+        <member name="M:Application.Extension.Infrastructure.Validator.Validator.IsValid``1(``0,System.String@)">
+            <summary>
+            验证是否成功
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
